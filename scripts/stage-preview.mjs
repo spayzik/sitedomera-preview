@@ -16,7 +16,7 @@ html=html.replace('<body>','<body>'+notice);
 writeFileSync(join(target,'index.html'),html);
 writeFileSync(join(target,'robots.txt'),'User-agent: *\nDisallow: /\n');
 rmSync(join(target,'sitemap.xml'),{force:true});
-writeFileSync(join(target,'preview-source.json'),JSON.stringify({repository:'spayzik/sitedomera',sha:'65b1e54e7e35441795ed7307ae95b381f32e1823',purpose:'Owner visual review; not production'},null,2)+'\n');
+writeFileSync(join(target,'preview-source.json'),JSON.stringify({repository:'spayzik/sitedomera',sha:'8c48db369112ba36bd8a43e337048500140f29db',purpose:'Owner visual review; not production'},null,2)+'\n');
 assert(html.includes('content="noindex, nofollow, noarchive"'));
 assert(html.includes(notice));assert(!existsSync(join(target,'sitemap.xml')));
 assert(!readFileSync(join(target,'robots.txt'),'utf8').includes('Sitemap:'));

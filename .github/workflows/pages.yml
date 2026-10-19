@@ -16,16 +16,16 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: preview
-      - name: Checkout exact editorial candidate
+      - name: Checkout exact approved catalog candidate
         uses: actions/checkout@v4
         with:
           repository: spayzik/sitedomera
-          ref: 65b1e54e7e35441795ed7307ae95b381f32e1823
+          ref: 8c48db369112ba36bd8a43e337048500140f29db
           path: source
           persist-credentials: false
       - name: Verify exact source SHA
         working-directory: source
-        run: test "$(git rev-parse HEAD)" = "65b1e54e7e35441795ed7307ae95b381f32e1823"
+        run: test "$(git rev-parse HEAD)" = "8c48db369112ba36bd8a43e337048500140f29db"
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
