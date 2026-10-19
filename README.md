@@ -1,8 +1,8 @@
-# Domera compact catalog preview
+# Domera editorial catalog preview
 
 Isolated staging / owner visual review. Not a production release.
 
-Source: spayzik/sitedomera, exact commit `2e78ea12381ce4fcde9e21ff8504baaae21f2dbc`.
+Source: spayzik/sitedomera, exact commit `65b1e54e7e35441795ed7307ae95b381f32e1823`.
 
 The workflow checks out the immutable source commit, runs all existing production gates, then copies only verified dist to a separate staging directory. The staging copy adds noindex and a small test-version notice, removes sitemap.xml and uses a robots.txt without a sitemap. Source files and the production verifier are never altered.
 
